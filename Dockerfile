@@ -1,12 +1,10 @@
 FROM alpine
 
-MAINTAINER Viktor Farcic <viktor@farcic.com>
-
 LABEL org.label-schema.vcs-ref=$VCS_REF \
-      org.label-schema.vcs-url="https://github.com/vfarcic/kubectl" \
+      org.label-schema.vcs-url="https://github.com/nguyenngoctranvu/kubectl" \
       org.label-schema.docker.dockerfile="/Dockerfile"
 
-ENV KUBE_LATEST_VERSION="v1.15.2"
+ENV KUBE_LATEST_VERSION="v1.18.3"
 
 RUN apk add --update ca-certificates && \
     apk add --update -t deps curl && \
